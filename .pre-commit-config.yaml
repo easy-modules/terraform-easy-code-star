@@ -1,18 +1,18 @@
 default_stages: [commit]
 repos:
-  - repo: https://github.com/terraform-docs/terraform-docs
-    rev: "v0.16.0"
-    hooks:
-      - id: terraform-docs-go
-        args: ["--output-file", "README.md"]  # e.g. ["--output-file", "README.md", "./mymodule/path"]
+  # - repo: https://github.com/terraform-docs/terraform-docs
+  #   rev: "v0.16.0"
+  #   hooks:
+  #     - id: terraform-docs-go
+  #       args: ["--output-file", "README.md"]  # e.g. ["--output-file", "README.md", "./mymodule/path"]
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.77.1
     hooks:
       - id: terraform_fmt
       - id: terraform_validate
-      - id: terraform_docs_replace
-        # args:
-        #   - '--args=--lockfile=false'
+      - id: terraform_docs
+        args:
+          - --args=--config=.terraform-docs.yml
       - id: terraform_tflint
         args:
           - '--args=--only=terraform_deprecated_interpolation'

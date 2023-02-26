@@ -34,5 +34,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_arn"></a> [arn](#output\_arn) | value of the arn attribute of the aws\_codestarconnections\_connection resource |
-| <a name="output_connection_status"></a> [connection\_status](#output\_connection\_status) | value of the connection\_status attribute of the aws\_codestarconnections\_connection resource |
 | <a name="output_name"></a> [name](#output\_name) | value of the name attribute of the aws\_codestarconnections\_connection resource |
