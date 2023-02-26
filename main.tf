@@ -1,9 +1,9 @@
 resource "aws_codestarconnections_connection" "this" {
-  name          = "${var.aws_codestarconnections_connection.name}-${var.stage}"
-  provider_type = var.aws_codestarconnections_connection.provider_type
+  name          = join("-", [var.stage, var.name])
+  provider_type = var.provider_type
 
   tags = {
-    "Terraform"   = "true"
+    "Powered by"  = "Terraform"
     "Environment" = var.stage
   }
 }
