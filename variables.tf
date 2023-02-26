@@ -3,10 +3,12 @@ variable "stage" {
   description = "(optional) environment"
 }
 
-variable "aws_codestarconnections_connection" {
-  type = object({
-    name          = string
-    provider_type = string
-  })
-  description = "(required) variables to aws_codestarconnections_connection"
+variable "name" {
+  type        = string
+  description = "(required) name of the resource"
+}
+
+variable "provider_type" {
+  type        = string
+  description = "(required) The name of the external provider where your third-party code repository is configured. The valid provider type is Bitbucket."
 }
