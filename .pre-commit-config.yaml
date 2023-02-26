@@ -1,13 +1,9 @@
 default_stages: [commit]
 repos:
-  - repo: local
+  - repo: https://github.com/terraform-docs/terraform-docs
+    rev: "v0.16.0"
     hooks:
-      - id: terraform-docs
-        name: terraform-docs
-        language: docker_image
-        entry: quay.io/terraform-docs/terraform-docs:latest  # or, change latest to pin to a specific version
-        # args: ["ARGS", "TO PASS", "INCLUDING PATH"]          # e.g. ["--output-file", "README.md", "./mymodule/path"]
-        pass_filenames: false
+      - id: terraform-docs-go
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.77.1
     hooks:
