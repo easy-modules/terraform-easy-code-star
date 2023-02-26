@@ -9,7 +9,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.53.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.56.0 |
 
 ## Modules
 
@@ -25,12 +25,14 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_aws_codestarconnections_connection"></a> [aws\_codestarconnections\_connection](#input\_aws\_codestarconnections\_connection) | (required) variables to aws\_codestarconnections\_connection | <pre>object({<br>    name          = optional(string, "default")<br>    provider_type = optional(string, "GitHub")<br>  })</pre> | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | (required) name of the resource | `string` | n/a | yes |
+| <a name="input_provider_type"></a> [provider\_type](#input\_provider\_type) | (required) The name of the external provider where your third-party code repository is configured. The valid provider type is Bitbucket. | `string` | n/a | yes |
 | <a name="input_stage"></a> [stage](#input\_stage) | (optional) environment | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_aws_codestarconnections_connection_arns"></a> [aws\_codestarconnections\_connection\_arns](#output\_aws\_codestarconnections\_connection\_arns) | n/a |
-| <a name="output_aws_codestarconnections_connection_names"></a> [aws\_codestarconnections\_connection\_names](#output\_aws\_codestarconnections\_connection\_names) | n/a |
+| <a name="output_arn"></a> [arn](#output\_arn) | value of the arn attribute of the aws\_codestarconnections\_connection resource |
+| <a name="output_connection_status"></a> [connection\_status](#output\_connection\_status) | value of the connection\_status attribute of the aws\_codestarconnections\_connection resource |
+| <a name="output_name"></a> [name](#output\_name) | value of the name attribute of the aws\_codestarconnections\_connection resource |
