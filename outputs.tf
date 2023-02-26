@@ -8,7 +8,7 @@ output "arn" {
   description = "value of the arn attribute of the aws_codestarconnections_connection resource"
 }
 
-output "connection_status" {
+/* output "connection_status" {
   value       = aws_codestarconnections_connection.this.connection_status
   description = "value of the connection_status attribute of the aws_codestarconnections_connection resource"
-}
+} */
