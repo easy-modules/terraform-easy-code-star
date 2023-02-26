@@ -5,8 +5,8 @@ variable "stage" {
 
 variable "aws_codestarconnections_connection" {
   type = object({
-    name          = optional(string)
-    provider_type = optional(string)
+    name          = string
+    provider_type = string
   })
   description = "(required) variables to aws_codestarconnections_connection"
 }
