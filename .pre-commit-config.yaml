@@ -1,13 +1,21 @@
 default_stages: [commit]
 repos:
+  - repo: local
+    hooks:
+      - id: terraform-docs
+        name: terraform-docs
+        language: docker_image
+        entry: quay.io/terraform-docs/terraform-docs:latest  # or, change latest to pin to a specific version
+        # args: ["ARGS", "TO PASS", "INCLUDING PATH"]          # e.g. ["--output-file", "README.md", "./mymodule/path"]
+        pass_filenames: false
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.77.1
     hooks:
       - id: terraform_fmt
       - id: terraform_validate
-      - id: terraform_docs
-        # args:
-        #   - '--args=--lockfile=false'
+      # - id: terraform_docs
+        args:
+          - '--args=--lockfile=false'
       - id: terraform_tflint
         args:
           - '--args=--only=terraform_deprecated_interpolation'
